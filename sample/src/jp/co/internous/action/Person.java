@@ -2,18 +2,33 @@ package jp.co.internous.action;
 
 public class Person{
 
-public String name = null;
-public int age = 0;
-public String phoneNumber = null;
-public String address = null;
+private String name = null;
+private int age = 0;
 
-public void talk(){
-System.out.println(this.name + "が話す");
+public Person(){}
+
+public Person(String name,int age){
+	this.name=name;
+	this.age=age;
 }
-public void walk(){
-	System.out.println(this.name + "が歩く");
+
+public String getName(){
+	return this.name;
+
 }
-	public void run(){
-		System.out.println(this.name + "が走る");
-	}
+
+public void setName(String name){
+	this.name=name;
 }
+
+public int getAge(){
+	return this.age;
+
+}
+
+public void setAge(int age){
+	this.age=age;
+}
+
+}
+
