@@ -3,12 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset=UTF-8">
+<meta charset="UTF-8">
 <title>WELCOME</title>
 </head>
 <body>
 名前とパスワードを入力してください。
-<form method="post" action="WelcomeSrevlet">
+<form method="post" action="WelcomeServlet">
 <input type="text" name="username">
 <input type="password" name="password">
 <input type="submit" name="送信">

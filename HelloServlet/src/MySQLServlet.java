@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,7 +21,7 @@ public class MySQLServlet extends HttpServlet {
 
     }
 
-	protected void doget(HttpServletRequest request,
+	protected void doGet(HttpServletRequest request,
 	HttpServletResponse response) throws
 	ServletException, IOException {
 	request.setCharacterEncoding("UTF-8");
@@ -30,11 +29,11 @@ public class MySQLServlet extends HttpServlet {
 
     PrintWriter out = response.getWriter();
 
-    out println("<html>");
-    out println("<head>");
-    out println("<title>データベーステスト</title>");
-    out println("</head>");
-    out println("<body>");
+    out.println("<html>");
+    out.println("<head>");
+    out.println("<title>データベーステスト</title>");
+    out.println("</head>");
+    out.println("<body>");
 
     Connection conn = null;
     String url = "jdbc:mysql://localhost/testdb";
@@ -54,7 +53,7 @@ public class MySQLServlet extends HttpServlet {
     	 String userName = rs.getString("user_name");
     	 String userPassword = rs.getString("password");
     	 out.println("<p>");
-    	 out.println("ユーザーID:"+userId+",ユーザー名:"+userName+",パスワード：+userPassword");
+    	 out.println("ユーザーID:"+userId+",ユーザー名:"+userName+",パスワード："+userPassword);
     	 out.println("</p>");
      }
 
@@ -64,11 +63,23 @@ public class MySQLServlet extends HttpServlet {
     	 out.println("ClassNotFoundException:"+e.getMessage());
      }catch(SQLException e){
 
-
+    out.println	("SQLException:"+ e.getMessage());
+     }catch (Exception e){
+    	 out.println("Exception:"+ e.getMessage());
+     }finally{
+    	 try{
+    	  if(conn !=null){
+    		  conn.close();
+    	  }
+    	 }catch(SQLException e){
+    	 out.println("SQLException:"+ e.getMessage());
      }
+     }
+    out.println("</body>");
+    out.println("</html>");
     }
 
-
+}
 
 
 
