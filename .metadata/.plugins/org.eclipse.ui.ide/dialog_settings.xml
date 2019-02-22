@@ -12,6 +12,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\shoya\Desktop\workspace\workspace-hirano\test\WebProj3"/>
 			<item value="C:\Users\testuser\Desktop\workspace\workspace-hirano\test"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
@@ -24,6 +25,6 @@
 	</section>
 	<section name="ChooseWorkspaceDialogSettings">
 		<item value="192" key="DIALOG_X_ORIGIN"/>
-		<item value="-56" key="DIALOG_Y_ORIGIN"/>
+		<item value="-9" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
