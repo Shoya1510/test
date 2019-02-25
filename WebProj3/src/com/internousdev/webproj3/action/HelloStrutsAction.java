@@ -1,4 +1,4 @@
-ppackage com.internousdev.webproj3.action;
+package com.internousdev.webproj3.action;
 
 import com.internousdev.webproj3.dao.HelloStrutsDAO;
 import com.internousdev.webproj3.dto.HelloStrutsDTO;

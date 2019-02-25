@@ -13,7 +13,7 @@ public void select (String name,String password){
 	DBConnector db = new DBConnector();
 	Connection con = db.getConnection();
 
-	String sql = "select * from test_table where user_name=? and password=?";
+	String sql = "select * from users where user_name=? and password=?";
 	try{
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.setString(1,name);
@@ -40,7 +40,7 @@ public void selectAll(){
 	DBConnector db=new DBConnector();
 	Connection con=db.getConnection();
 
-	String sql="select * from test_teble";
+	String sql="select * from users";
 	try{
 		PreparedStatement ps = con.prepareStatement(sql);
 		ResultSet rs=ps.executeQuery();
@@ -62,7 +62,7 @@ public void selectByName (String name){
 	DBConnector db = new DBConnector();
 	Connection con = db.getConnection();
 
-	String sql = "select * from test_table where user_name=?";
+	String sql = "select * from users where user_name=?";
 	try{
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.setString(1,name);
@@ -88,7 +88,7 @@ public void selectByPassword (String password){
 	DBConnector db = new DBConnector();
 	Connection con = db.getConnection();
 
-	String sql = "select * from test_table where password=?";
+	String sql = "select * from users where password=?";
 	try{
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.setString(1,password);
@@ -113,7 +113,7 @@ public void updateUserNameByUserName(String oldName,String newName) {
 	DBConnector db = new DBConnector();
 	Connection con = db.getConnection();
 
-	String sql ="update test_table set user_name=? where user_name=?";
+	String sql ="update users set user_name=? where user_name=?";
 	try {
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.setString(1, newName);
@@ -139,7 +139,7 @@ public void insert(int user_id,String name,String password){
 	DBConnector db =new DBConnector();
 	Connection con=db.getConnection();
 
-	String sql="insert into test_table values(?,?,?)";
+	String sql="insert into users values(?,?,?)";
     try{
     	PreparedStatement ps = con.prepareStatement(sql);
     	ps.setInt(1, user_id);
@@ -164,7 +164,7 @@ public void delete(String name){
 	DBConnector db=new DBConnector();
 	Connection con=db.getConnection();
 
-	String sql = "delete from test_table where user_name=?";
+	String sql = "delete from users where user_name=?";
 	try{
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.setString(1,name);

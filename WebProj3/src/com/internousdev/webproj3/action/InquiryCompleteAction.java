@@ -1,6 +1,7 @@
 package com.internousdev.webproj3.action;
 
 import com.internousdev.webproj3.dao.InquiryCompleteDAO;
+import com.opensymphony.xwork2.ActionSupport;
 
 public class InquiryCompleteAction extends ActionSupport{
 

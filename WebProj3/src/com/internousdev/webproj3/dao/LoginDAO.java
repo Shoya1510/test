@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.internousdev.webproj3.dto.LoginDTO;
 import com.internousdev.webproj3.util.DBConnector;
 
 
@@ -14,7 +15,6 @@ public class LoginDAO {
 	public String password;
 
 	public LoginDTO select(String username,String password) {
-		boolean ret=false;
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
 		LoginDTO dto=new LoginDTO();
