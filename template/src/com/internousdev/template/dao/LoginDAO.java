@@ -1,5 +1,7 @@
 package com.internousdev.template.dao;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import com.internousdev.template.dto.LoginDTO;
@@ -15,7 +17,7 @@ public class LoginDAO {
 		String sql = "SELECT * FROM login_user_transaction where login_id = ? AND login_pass = ?";
 
 		try{
-			PreparedStatament PreparedStatement = connection.preparedStatement(sql);
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
 			preparedStatement.setString(1,loginUserId);
 			preparedStatement.setString(2,loginPassword);
